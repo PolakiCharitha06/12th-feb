@@ -1,0 +1,29 @@
+cf=100
+wh=200
+br=120
+mai=300
+mas=70
+cname=input('enter customer name:')
+cphno=int(input('enter customer phone num:'))
+cfq=int(input('enter num of corn flour packets:'))
+whq=int(input('enter num of wheat packets:'))
+brq=int(input('enter num of bread packets:'))
+maiq=int(input('enter num of maida packets:'))
+masq=int(input('enter num of masala packets:'))
+bill=(cf*cfq)+(wh*whq)+(br*brq)+(mai*maiq)+(mas*masq)
+if bill>5000:
+    dis=bill*10/100
+    tax=0
+elif bill>2000:
+    dis=bill*5/100
+    tax=0
+elif bill>1000:
+    dis=bill*3/100
+    tax=0
+elif bill>3000:
+    dis=bill*8/100
+    tax=bill*10/100
+else:
+    tax=bill*18/100
+mainbill=bill-dis+tax
+print('bill amount:',mainbill)
